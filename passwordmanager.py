@@ -128,6 +128,7 @@ class App(customtkinter.CTk):
                 self.entry1.configure(state=DISABLED)
     #User can see all records that saved before and update or delete records.
     def see_records(self):
+        #If there are records in the database, the “See Records” window opens. If not, a “There aren’t any records” warning appears.
         if self.collect_records():
             self.tplvl1 = customtkinter.CTkToplevel(self)
             self.tplvl1.attributes("-topmost", True)
@@ -234,4 +235,5 @@ class App(customtkinter.CTk):
 
 if __name__ == "__main__":
     app = App()
+
     app.mainloop()
